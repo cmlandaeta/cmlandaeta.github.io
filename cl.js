@@ -16,7 +16,7 @@ register.addEventListener("click", () => {
       .get(apiUrl)
       .then(function (response) {
         //console.log("Página web recibida:", response.data);
-        window.location.href = response.data + "/";
+        window.location.href = response.data;
       })
       .catch(function (error) {
         console.log(error);
