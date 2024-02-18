@@ -7,44 +7,15 @@ const currentYearElement = document.getElementById("currentYear");
 
 const currentYear = new Date().getFullYear();
 
-currentYearElement.textContent = currentYear;
-estudios.innerHTML = `<li>Ingenieria Electronica.Instituto Politecnico Santiago Marino/2011</li> <li>Desarrollador WEB.2023</li>`;
+const apiUrl = "http://localhost:8000/verificar-dominio";
 
-descr.innerHTML = `Soy Ingeniero Electronico con experiencia en telecomunicaciones y 
-conocimientos sólidos en GNU/Linux, seguridad informática, redes IP y Telefonia IP. Cuento con
- habilidades como desarrollador web en JavaScript y Node.js para soluciones en VoIP y Asterisk y otras soluciones. 
- Puedo ayudarte implementar soluciones de comunicación de alta calidad en tu empresa. 
- Puedo llevar tus soluciones de comunicación al siguiente nivel, 
- la combinacion de mis habilidades en telecomunicaciones, seguridad informática y desarrollo de software 
- te permitirá mejorar la eficiencia y efectividad de tus sistemas de comunicación de manera significativa.`;
-
-register.addEventListener("click", async (e) => {
-  const apiUrl = "http://localhost:4001/api/call";
-  // Crear un objeto con los datos a enviar
-  const ObjDatos = {
-    phone: 2001,
-    pass: "ccs123",
-    exten: 3001,
-  };
-
-  // Realizar una solicitud POST a la API remota
-  //const apiUrl = "http://45e4028ea1f5.sn.mynetname.net:41347/api";
-
+register.addEventListener("click", () => {
   try {
-    /* const res = await fetch(apiUrl, {
-      method: "POST",
-      body: JSON.stringify(ObjDatos),
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-      },
-    });*/
-    const res = axios
-      .post(apiUrl, ObjDatos)
+    const resp = axios
+      .get(apiUrl)
       .then(function (response) {
-        //console.log(response.data.teclado);
-        window.location.href = response.data.teclado;
+        //console.log("Página web recibida:", response.data);
+        window.location.href = response.data + "/";
       })
       .catch(function (error) {
         console.log(error);
@@ -82,22 +53,49 @@ window.addEventListener("DOMContentLoaded", (event) => {
       rootMargin: "0px 0px -40%",
     });
   }
-
-  // // Collapse responsive navbar when toggler is visible
-  // const navbarToggler = document.body.querySelector(".navbar-toggler");
-  // const responsiveNavItems = [].slice.call(
-  //   document.querySelectorAll("#navbarResponsive .nav-link")
-  // );
-  // responsiveNavItems.map(function (responsiveNavItem) {
-  //   responsiveNavItem.addEventListener("click", () => {
-  //     if (window.getComputedStyle(navbarToggler).display !== "none") {
-  //       navbarToggler.click();
-  //     }
-  //   });
-  // });
-
-  // // Activate SimpleLightbox plugin for portfolio items
-  // new SimpleLightbox({
-  //   elements: "#portfolio a.portfolio-box",
-  // });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var options = {
+    strings: [
+      "Desarrollador Frontend y Backend",
+      "Además, soy experto en implementar soluciones avanzadas de Asterisk.",
+      "Fusionando desarrollo y comunicaciones para Contact Center y IPPBX.",
+    ],
+    typeSpeed: 90, // Velocidad de escritura en milisegundos
+    backSpeed: 40, // Velocidad de retroceso en milisegundos
+    loop: false, // Repetir la transcripción automáticamente
+  };
+
+  var typed = new Typed("#typed-text", options);
+});
+
+currentYearElement.textContent = currentYear;
+estudios.innerHTML = `<li>Ingenieria Electronica.Instituto Politecnico Santiago Marino/2011</li> <li>Desarrollador WEB.2023</li>`;
+
+descr.innerHTML = `Soy Ingeniero Electronico con experiencia en telecomunicaciones y 
+conocimientos sólidos en GNU/Linux, seguridad informática, redes IP y Telefonia IP. Cuento con
+ habilidades como desarrollador web en JavaScript y Node.js para soluciones en VoIP y Asterisk y otras soluciones. 
+ Puedo ayudarte implementar soluciones de comunicación de alta calidad en tu empresa. 
+ Puedo llevar tus soluciones de comunicación al siguiente nivel, 
+ la combinacion de mis habilidades en telecomunicaciones, seguridad informática y desarrollo de software 
+ te permitirá mejorar la eficiencia y efectividad de tus sistemas de comunicación de manera significativa.`;
+const conect = async (e) => {
+  e.preventDefault();
+};
+
+// register.addEventListener("click", async (e) => {
+//   try {
+//     axios
+//       .get(apiUrl)
+//       .then(function (response) {
+//         //console.log("Página web recibida:", response.data);
+//         return response.data;
+//       })
+//       .catch(function (error) {
+//         console.log(error);
+//       });
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// });
