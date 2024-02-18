@@ -7,7 +7,8 @@ const currentYearElement = document.getElementById("currentYear");
 
 const currentYear = new Date().getFullYear();
 
-const apiUrl = "http://localhost:8000/verificar-dominio";
+const apiUrl =
+  "https://bk-assistant-interactive-profile.onrender.com/verificar-dominio";
 
 register.addEventListener("click", () => {
   try {
