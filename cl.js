@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 currentYearElement.textContent = currentYear;
-estudios.innerHTML = `<li>Ingenieria Electronica.Instituto Politecnico Santiago Marino/2011</li> <li>Desarrollador WEB.2023</li>`;
+estudios.innerHTML = `✔️ Ingenieria Electronica.Instituto Politecnico Santiago Marino/2011</li> <br> ✔️ Desarrollador WEB.2023`;
 
 descr.innerHTML = `Soy Ingeniero Electronico con experiencia en telecomunicaciones y 
 conocimientos sólidos en GNU/Linux, seguridad informática, redes IP y Telefonia IP. Cuento con
