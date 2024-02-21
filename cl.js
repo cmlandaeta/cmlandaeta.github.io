@@ -11,19 +11,21 @@ const apiUrl =
   "https://bk-assistant-interactive-profile.onrender.com/verificar-dominio";
 
 register.addEventListener("click", () => {
-  try {
-    const resp = axios
-      .get(apiUrl)
-      .then(function (response) {
-        //console.log("Página web recibida:", response.data);
-        window.location.href = response.data;
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  } catch (error) {
-    console.error("Error:", error);
-  }
+  window.location.href =
+    "https://fr-assistant-interactive-profile.onrender.com";
+  // try {
+  //   const resp = axios
+  //     .get(apiUrl)
+  //     .then(function (response) {
+  //       //console.log("Página web recibida:", response.data);
+  //       window.location.href = response.data;
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // } catch (error) {
+  //   console.error("Error:", error);
+  // }
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {
