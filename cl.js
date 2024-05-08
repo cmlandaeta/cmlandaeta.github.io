@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 currentYearElement.textContent = currentYear;
-estudios.innerHTML = `✔️ Ingenieria Electronica.Instituto Politecnico Santiago Marino / 2011</li> <br> ✔️ Diplomado en Programacion / 2023`;
+estudios.innerHTML = `✔️ Ingenieria Electronica.Instituto Politecnico Santiago Marino / 2011 <br> ✔️ Diplomado en Programacion / 2023`;
 
 descr.innerHTML = `Soy Ingeniero Electronico con experiencia en telecomunicaciones y 
 conocimientos sólidos en GNU/Linux, seguridad informática, redes IP y Telefonia IP. Cuento con
