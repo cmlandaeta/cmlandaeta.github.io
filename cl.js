@@ -78,7 +78,7 @@ estudios.innerHTML = `✔️ Ingenieria Electronica.Instituto Politecnico Santia
 
 descr.innerHTML = `Soy Ingeniero Electronico con experiencia en telecomunicaciones y 
 conocimientos sólidos en GNU/Linux, seguridad informática, redes IP y Telefonia IP. Cuento con
- habilidades como desarrollador web en JavaScript y Node.js para soluciones en VoIP y Asterisk y otras soluciones. 
+ habilidades como desarrollador web en React - Vite y Node.js para soluciones en VoIP y Asterisk y aplicaciones Web. 
  Puedo ayudarte implementar soluciones de comunicación de alta calidad en tu empresa. 
  Puedo llevar tus soluciones de comunicación al siguiente nivel, 
  la combinacion de mis habilidades en telecomunicaciones, seguridad informática y desarrollo de software 
